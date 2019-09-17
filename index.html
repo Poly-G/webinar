@@ -1,0 +1,2377 @@
+<!DOCTYPE html>
+<!--[if lte IE 9]> <html lang="en" class="no-js old-ie"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js non-ie">
+<!--<![endif]-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {});
+        NREUM.info = {
+            beacon: "bam.nr-data.net",
+            errorBeacon: "bam.nr-data.net",
+            licenseKey: "1e083e1800",
+            applicationID: "13119952",
+            transactionName: "c1pdRBALVVUDRR5AUFJcXVEQFxZQCFNUTw==",
+            queueTime: 0,
+            applicationTime: 1654,
+            agent: ""
+        };
+    </script>
+    <script type="text/javascript">
+        window.NREUM || (NREUM = {}),
+            (__nr_require = (function (e, n, t) {
+                function r(t) {
+                    if (!n[t]) {
+                        var o = (n[t] = {
+                            exports: {}
+                        });
+                        e[t][0].call(
+                            o.exports,
+                            function (n) {
+                                var o = e[t][1][n];
+                                return r(o || n);
+                            },
+                            o,
+                            o.exports
+                        );
+                    }
+                    return n[t].exports;
+                }
+                if ("function" == typeof __nr_require) return __nr_require;
+                for (var o = 0; o < t.length; o++) r(t[o]);
+                return r;
+            })({
+                    1: [
+                        function (e, n, t) {
+                            function r() {}
+
+                            function o(e, n, t) {
+                                return function () {
+                                    return (
+                                        i(e, [c.now()].concat(u(arguments)), n ? null : this, t),
+                                        n ? void 0 : this
+                                    );
+                                };
+                            }
+                            var i = e("handle"),
+                                a = e(3),
+                                u = e(4),
+                                f = e("ee").get("tracer"),
+                                c = e("loader"),
+                                s = NREUM;
+                            "undefined" == typeof window.newrelic && (newrelic = s);
+                            var p = [
+                                    "setPageViewName",
+                                    "setCustomAttribute",
+                                    "setErrorHandler",
+                                    "finished",
+                                    "addToTrace",
+                                    "inlineHit",
+                                    "addRelease"
+                                ],
+                                d = "api-",
+                                l = d + "ixn-";
+                            a(p, function (e, n) {
+                                    s[n] = o(d + n, !0, "api");
+                                }),
+                                (s.addPageAction = o(d + "addPageAction", !0)),
+                                (s.setCurrentRouteName = o(d + "routeName", !0)),
+                                (n.exports = newrelic),
+                                (s.interaction = function () {
+                                    return new r().get();
+                                });
+                            var m = (r.prototype = {
+                                createTracer: function (e, n) {
+                                    var t = {},
+                                        r = this,
+                                        o = "function" == typeof n;
+                                    return (
+                                        i(l + "tracer", [c.now(), e, t], r),
+                                        function () {
+                                            if (
+                                                (f.emit(
+                                                        (o ? "" : "no-") + "fn-start",
+                                                        [c.now(), r, o],
+                                                        t
+                                                    ),
+                                                    o)
+                                            )
+                                                try {
+                                                    return n.apply(this, arguments);
+                                                } catch (e) {
+                                                    throw (f.emit("fn-err", [arguments, this,
+                                                            e
+                                                        ], t),
+                                                        e);
+                                                } finally {
+                                                    f.emit("fn-end", [c.now()], t);
+                                                }
+                                        }
+                                    );
+                                }
+                            });
+                            a(
+                                    "actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get"
+                                    .split(
+                                        ","
+                                    ),
+                                    function (e, n) {
+                                        m[n] = o(l + n);
+                                    }
+                                ),
+                                (newrelic.noticeError = function (e, n) {
+                                    "string" == typeof e && (e = new Error(e)),
+                                        i("err", [e, c.now(), !1, n]);
+                                });
+                        },
+                        {}
+                    ],
+                    2: [
+                        function (e, n, t) {
+                            function r(e, n) {
+                                if (!o) return !1;
+                                if (e !== o) return !1;
+                                if (!n) return !0;
+                                if (!i) return !1;
+                                for (
+                                    var t = i.split("."), r = n.split("."), a = 0; a < r.length; a++
+                                )
+                                    if (r[a] !== t[a]) return !1;
+                                return !0;
+                            }
+                            var o = null,
+                                i = null,
+                                a = /Version\/(\S+)\s+Safari/;
+                            if (navigator.userAgent) {
+                                var u = navigator.userAgent,
+                                    f = u.match(a);
+                                f &&
+                                    u.indexOf("Chrome") === -1 &&
+                                    u.indexOf("Chromium") === -1 &&
+                                    ((o = "Safari"), (i = f[1]));
+                            }
+                            n.exports = {
+                                agent: o,
+                                version: i,
+                                match: r
+                            };
+                        },
+                        {}
+                    ],
+                    3: [
+                        function (e, n, t) {
+                            function r(e, n) {
+                                var t = [],
+                                    r = "",
+                                    i = 0;
+                                for (r in e) o.call(e, r) && ((t[i] = n(r, e[r])), (i += 1));
+                                return t;
+                            }
+                            var o = Object.prototype.hasOwnProperty;
+                            n.exports = r;
+                        },
+                        {}
+                    ],
+                    4: [
+                        function (e, n, t) {
+                            function r(e, n, t) {
+                                n || (n = 0),
+                                    "undefined" == typeof t && (t = e ? e.length : 0);
+                                for (
+                                    var r = -1, o = t - n || 0, i = Array(o < 0 ? 0 : o);
+                                    ++r < o;
+
+                                )
+                                    i[r] = e[n + r];
+                                return i;
+                            }
+                            n.exports = r;
+                        },
+                        {}
+                    ],
+                    5: [
+                        function (e, n, t) {
+                            n.exports = {
+                                exists: "undefined" != typeof window.performance &&
+                                    window.performance.timing &&
+                                    "undefined" !=
+                                    typeof window.performance.timing.navigationStart
+                            };
+                        },
+                        {}
+                    ],
+                    ee: [
+                        function (e, n, t) {
+                            function r() {}
+
+                            function o(e) {
+                                function n(e) {
+                                    return e && e instanceof r ? e : e ? f(e, u, i) : i();
+                                }
+
+                                function t(t, r, o, i) {
+                                    if (!d.aborted || i) {
+                                        e && e(t, r, o);
+                                        for (
+                                            var a = n(o), u = v(t), f = u.length, c = 0; c < f; c++
+                                        )
+                                            u[c].apply(a, r);
+                                        var p = s[y[t]];
+                                        return p && p.push([b, t, r, a]), a;
+                                    }
+                                }
+
+                                function l(e, n) {
+                                    h[e] = v(e).concat(n);
+                                }
+
+                                function m(e, n) {
+                                    var t = h[e];
+                                    if (t)
+                                        for (var r = 0; r < t.length; r++)
+                                            t[r] === n && t.splice(r, 1);
+                                }
+
+                                function v(e) {
+                                    return h[e] || [];
+                                }
+
+                                function g(e) {
+                                    return (p[e] = p[e] || o(t));
+                                }
+
+                                function w(e, n) {
+                                    c(e, function (e, t) {
+                                        (n = n || "feature"), (y[t] = n), n in s || (s[n] = []);
+                                    });
+                                }
+                                var h = {},
+                                    y = {},
+                                    b = {
+                                        on: l,
+                                        addEventListener: l,
+                                        removeEventListener: m,
+                                        emit: t,
+                                        get: g,
+                                        listeners: v,
+                                        context: n,
+                                        buffer: w,
+                                        abort: a,
+                                        aborted: !1
+                                    };
+                                return b;
+                            }
+
+                            function i() {
+                                return new r();
+                            }
+
+                            function a() {
+                                (s.api || s.feature) &&
+                                ((d.aborted = !0), (s = d.backlog = {}));
+                            }
+                            var u = "nr@context",
+                                f = e("gos"),
+                                c = e(3),
+                                s = {},
+                                p = {},
+                                d = (n.exports = o());
+                            d.backlog = s;
+                        },
+                        {}
+                    ],
+                    gos: [
+                        function (e, n, t) {
+                            function r(e, n, t) {
+                                if (o.call(e, n)) return e[n];
+                                var r = t();
+                                if (Object.defineProperty && Object.keys)
+                                    try {
+                                        return (
+                                            Object.defineProperty(e, n, {
+                                                value: r,
+                                                writable: !0,
+                                                enumerable: !1
+                                            }),
+                                            r
+                                        );
+                                    } catch (i) {}
+                                return (e[n] = r), r;
+                            }
+                            var o = Object.prototype.hasOwnProperty;
+                            n.exports = r;
+                        },
+                        {}
+                    ],
+                    handle: [
+                        function (e, n, t) {
+                            function r(e, n, t, r) {
+                                o.buffer([e], r), o.emit(e, n, t);
+                            }
+                            var o = e("ee").get("handle");
+                            (n.exports = r), (r.ee = o);
+                        },
+                        {}
+                    ],
+                    id: [
+                        function (e, n, t) {
+                            function r(e) {
+                                var n = typeof e;
+                                return !e || ("object" !== n && "function" !== n) ?
+                                    -1 :
+                                    e === window ?
+                                    0 :
+                                    a(e, i, function () {
+                                        return o++;
+                                    });
+                            }
+                            var o = 1,
+                                i = "nr@id",
+                                a = e("gos");
+                            n.exports = r;
+                        },
+                        {}
+                    ],
+                    loader: [
+                        function (e, n, t) {
+                            function r() {
+                                if (!E++) {
+                                    var e = (x.info = NREUM.info),
+                                        n = l.getElementsByTagName("script")[0];
+                                    if (
+                                        (setTimeout(s.abort, 3e4),
+                                            !(e && e.licenseKey && e.applicationID && n))
+                                    )
+                                        return s.abort();
+                                    c(y, function (n, t) {
+                                            e[n] || (e[n] = t);
+                                        }),
+                                        f("mark", ["onload", a() + x.offset], null, "api");
+                                    var t = l.createElement("script");
+                                    (t.src = "https://" + e.agent),
+                                    n.parentNode.insertBefore(t, n);
+                                }
+                            }
+
+                            function o() {
+                                "complete" === l.readyState && i();
+                            }
+
+                            function i() {
+                                f("mark", ["domContent", a() + x.offset], null, "api");
+                            }
+
+                            function a() {
+                                return O.exists && performance.now ?
+                                    Math.round(performance.now()) :
+                                    (u = Math.max(new Date().getTime(), u)) - x.offset;
+                            }
+                            var u = new Date().getTime(),
+                                f = e("handle"),
+                                c = e(3),
+                                s = e("ee"),
+                                p = e(2),
+                                d = window,
+                                l = d.document,
+                                m = "addEventListener",
+                                v = "attachEvent",
+                                g = d.XMLHttpRequest,
+                                w = g && g.prototype;
+                            NREUM.o = {
+                                ST: setTimeout,
+                                SI: d.setImmediate,
+                                CT: clearTimeout,
+                                XHR: g,
+                                REQ: d.Request,
+                                EV: d.Event,
+                                PR: d.Promise,
+                                MO: d.MutationObserver
+                            };
+                            var h = "" + location,
+                                y = {
+                                    beacon: "bam.nr-data.net",
+                                    errorBeacon: "bam.nr-data.net",
+                                    agent: "js-agent.newrelic.com/nr-1130.min.js"
+                                },
+                                b = g && w && w[m] && !/CriOS/.test(navigator.userAgent),
+                                x = (n.exports = {
+                                    offset: u,
+                                    now: a,
+                                    origin: h,
+                                    features: {},
+                                    xhrWrappable: b,
+                                    userAgent: p
+                                });
+                            e(1),
+                                l[m] ?
+                                (l[m]("DOMContentLoaded", i, !1), d[m]("load", r, !1)) :
+                                (l[v]("onreadystatechange", o), d[v]("onload", r)),
+                                f("mark", ["firstbyte", u], null, "api");
+                            var E = 0,
+                                O = e(5);
+                        },
+                        {}
+                    ]
+                }, {},
+                ["loader"]
+            ));
+    </script>
+    <meta http-equiv="Content-Language" content="en" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Copyright" content="GoDaddy Operating Company, LLC." />
+    <meta name="Author" content="GoDaddy Email Marketing" />
+    <meta name="description"
+        content="GoDaddy Email Marketing makes it simple to send HTML email newsletters, grow your subscribers and manage your email list. Sign up for a free email marketing account today!"
+        property="og:description" />
+    <meta content="noindex,nofollow" name="robots" />
+    <meta name="google-site-verification" content="7dn5z-cyJXG28LQU06p7_UOteh4Bgxjj_ucZUieoBwI" />
+    <meta name="google-site-verification" content="CEt-lNx5BzIrp7pd1Sod186_PTztmhMdoWsrW6ouP54" />
+    <meta name="google-site-verification" content="WjTib5tXH2FqPRFN0RxHgJc_EAZ_tfhasy6cGkrVd1g" />
+    <meta name="google-site-verification" content="8QybOOpevHX_tt9-8YCRlyCoL8aJWDHtlst-7Pd3ltA" />
+    <meta name="keywords"
+        content="email, email marketing, email newsletter, social media tools, email list, HTML newsletters, stats, unsubscribe, subscribe, campaign, free email marketing, free email newsletters, send, templates, sign up, subscription, opt-in, form, listserv, newsletter templates, HTML email" />
+    <meta property="og:title" content="GoDaddy Email Marketing" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gem.godaddy.com" />
+    <meta property="og:image" content="https://cascade.madmimi.com/assets/og_gem.png" />
+    <meta property="og:site_name" content="GoDaddy Email Marketing" />
+    <meta name="csrf-param" content="authenticity_token" />
+    <meta name="csrf-token"
+        content="+rEy99axsyi3HKw/3+tWdocaKbpMNXycd9F2XgzguMeEAGtSqVsI5bEFFro4wStbHQEQypcOHcngtxjzl+GRxw==" />
+
+    <link href="https://plus.google.com/103159374788316098262" rel="publisher" />
+
+    <script>
+        (function (b) {
+            b.className = b.className.replace("no-js", "js");
+            if (Function("/*@cc_on return document.documentMode===10@*/")()) {
+                b.className = b.className.replace("non-ie", "ie10");
+            } else if (window.navigator.userAgent.indexOf("Trident/7.0") > 0) {
+                b.className = b.className.replace("non-ie", "ie11");
+            }
+            b.setAttribute("data-useragent", navigator.userAgent);
+            b.setAttribute("data-platform", navigator.platform);
+        })(document.documentElement);
+    </script>
+
+    <script>
+        // Warning! You'll find this same code duplicated in app/assets/javascripts/mimi/mimi_setup.js.erb
+        var Mimi = Mimi || {
+            SIZE_MAP: {
+                l: "master",
+                b: "master",
+                m: "small",
+                s: "small",
+                t: "tiny",
+                a: "tiny"
+            },
+            getParameterByName: function (name, url) {
+                var match = RegExp("[?&]" + name + "=([^&]*)").exec(
+                    url || window.location.search
+                );
+                return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+            },
+            fallbackImage: function (image) {
+                if (image.src.indexOf("thumbs.php") > 0) {
+                    var size = Mimi.getParameterByName("size", image.src),
+                        fallback =
+                        "https://d1lggihq2bt4jo.cloudfront.net/assets/promotion_thumb_master-85c2458616b51e2039ce2e2ba047c11d5f79f0c25e456cdc9f2206900163a884.svg"
+                        .replace(
+                            "master.svg",
+                            Mimi.SIZE_MAP[size] + ".svg"
+                        );
+                } else {
+                    var parts = image.src.split("/"),
+                        size = parts[parts.length - 1],
+                        fallback =
+                        "https://d1lggihq2bt4jo.cloudfront.net/assets/promotion_thumb_master-85c2458616b51e2039ce2e2ba047c11d5f79f0c25e456cdc9f2206900163a884.svg";
+                }
+                image.src = fallback;
+                image.onerror = null;
+            },
+            removeLoader: function (image) {
+                image.parentNode.removeChild(
+                    image.parentNode.querySelectorAll(".loader")[0]
+                );
+                image.onload = null;
+            }
+        };
+    </script>
+
+    <link rel="apple-touch-icon" sizes="57x57"
+        href="/assets/img/favicons/gem/apple-touch-icon-57x57.png?v=QEErb6NjaR" />
+    <link rel="apple-touch-icon" sizes="60x60"
+        href="/assets/img/favicons/gem/apple-touch-icon-60x60.png?v=QEErb6NjaR" />
+    <link rel="apple-touch-icon" sizes="72x72"
+        href="/assets/img/favicons/gem/apple-touch-icon-72x72.png?v=QEErb6NjaR" />
+    <link rel="apple-touch-icon" sizes="76x76"
+        href="/assets/img/favicons/gem/apple-touch-icon-76x76.png?v=QEErb6NjaR" />
+    <link rel="apple-touch-icon" sizes="114x114"
+        href="/assets/img/favicons/gem/apple-touch-icon-114x114.png?v=QEErb6NjaR" />
+    <link rel="apple-touch-icon" sizes="120x120"
+        href="/assets/img/favicons/gem/apple-touch-icon-120x120.png?v=QEErb6NjaR" />
+    <link rel="apple-touch-icon" sizes="144x144"
+        href="/assets/img/favicons/gem/apple-touch-icon-144x144.png?v=QEErb6NjaR" />
+    <link rel="apple-touch-icon" sizes="152x152"
+        href="/assets/img/favicons/gem/apple-touch-icon-152x152.png?v=QEErb6NjaR" />
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="/assets/img/favicons/gem/apple-touch-icon-180x180.png?v=QEErb6NjaR" />
+    <link rel="icon" type="image/png" href="/assets/img/favicons/gem/favicon-32x32.png?v=QEErb6NjaR" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/assets/img/favicons/gem/favicon-194x194.png?v=QEErb6NjaR"
+        sizes="194x194" />
+    <link rel="icon" type="image/png" href="/assets/img/favicons/gem/favicon-96x96.png?v=QEErb6NjaR" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/assets/img/favicons/gem/android-chrome-192x192.png?v=QEErb6NjaR"
+        sizes="192x192" />
+    <link rel="icon" type="image/png" href="/assets/img/favicons/gem/favicon-16x16.png?v=QEErb6NjaR" sizes="16x16" />
+    <link rel="manifest" href="/assets/img/favicons/gem/manifest.json?v=QEErb6NjaR" />
+    <link rel="mask-icon" href="/assets/img/favicons/gem/safari-pinned-tab.svg?v=QEErb6NjaR" color="#00a55e" />
+    <link rel="shortcut icon" href="/assets/img/favicons/gem/favicon.ico?v=QEErb6NjaR" />
+    <meta name="msapplication-TileColor" content="#fafafa" />
+    <meta name="msapplication-TileImage" content="/assets/img/favicons/gem/mstile-144x144.png?v=QEErb6NjaR" />
+    <meta name="msapplication-config" content="/assets/img/favicons/gem/browserconfig.xml?v=QEErb6NjaR" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <script>
+        var version =
+            navigator &&
+            navigator.userAgent &&
+            navigator.userAgent.match(/MSIE (\d+)./);
+        if (version && version[1]) {
+            version = parseInt(version[1], 10);
+            if (version <= 10) {
+                location.href = "https://www.godaddy.com/upgrade-your-browser";
+            }
+        }
+    </script>
+    <link rel="preload" href="//img1.wsimg.com/ux/fonts/uxfont/1.4/uxfont.woff2" as="font" type="font/woff2"
+        crossOrigin />
+    <link rel="preload" href="//img1.wsimg.com/ux/fonts/uxfont/1.4/uxfont-2.woff2" as="font" type="font/woff2"
+        crossOrigin />
+    <link rel="preload" href="//img1.wsimg.com/ux/fonts/boing/1.0/Boing-Bold.woff2" as="font" type="font/woff2"
+        crossOrigin />
+    <link rel="preload" href="//img1.wsimg.com/ux/fonts/sherpa/1.0/gdsherpa-bold.woff2" as="font" type="font/woff2"
+        crossOrigin />
+    <link rel="preload" href="//img1.wsimg.com/ux/fonts/sherpa/1.0/gdsherpa-regular.woff2" as="font" type="font/woff2"
+        crossOrigin />
+    <style>
+        @font-face {
+            font-family: uxfont;
+            src: url(//img1.wsimg.com/ux/fonts/uxfont/1.4/uxfont.woff2) format("woff2"),
+                url(//img1.wsimg.com/ux/fonts/uxfont/1.4/uxfont.woff) format("woff");
+            font-display: block;
+        }
+
+        @font-face {
+            font-family: uxfont-2;
+            src: url(//img1.wsimg.com/ux/fonts/uxfont/1.4/uxfont-2.woff2) format("woff2"),
+                url(//img1.wsimg.com/ux/fonts/uxfont/1.4/uxfont-2.woff) format("woff");
+            font-display: block;
+        }
+
+        @font-face {
+            font-family: Boing-Bold;
+            src: url(//img1.wsimg.com/ux/fonts/boing/1.0/Boing-Bold.woff2) format("woff2"),
+                url(//img1.wsimg.com/ux/fonts/boing/1.0/Boing-Bold.woff) format("woff");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: gdsherpa;
+            src: url(//img1.wsimg.com/ux/fonts/sherpa/1.0/gdsherpa-bold.woff2) format("woff2"),
+                url(//img1.wsimg.com/ux/fonts/sherpa/1.0/gdsherpa-bold.woff) format("woff");
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: gdsherpa;
+            src: url(//img1.wsimg.com/ux/fonts/sherpa/1.0/gdsherpa-regular.woff2) format("woff2"),
+                url(//img1.wsimg.com/ux/fonts/sherpa/1.0/gdsherpa-regular.woff) format("woff");
+            font-display: swap;
+        }
+    </style>
+    <link rel="stylesheet" href="https://img1.wsimg.com/wrhs/007882410304be1f534550ceda6f6079/uxcore2.min.css"
+        media="all" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="https://img1.wsimg.com/wrhs/4efcbe6cbbcb6337fed56f67648292ac/appheader.min.css"
+        media="all" />
+    <link rel="apple-touch-icon" sizes="57x57" href="//img1.wsimg.com/ux/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="//img1.wsimg.com/ux/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="//img1.wsimg.com/ux/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="//img1.wsimg.com/ux/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="//img1.wsimg.com/ux/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="//img1.wsimg.com/ux/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="//img1.wsimg.com/ux/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="//img1.wsimg.com/ux/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="//img1.wsimg.com/ux/favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="//img1.wsimg.com/ux/favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="//img1.wsimg.com/ux/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="//img1.wsimg.com/ux/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="//img1.wsimg.com/ux/favicon/favicon-16x16.png" />
+    <link rel="mask-icon" href="//img1.wsimg.com/ux/favicon/favicon-16x16.svg" color="black" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="//img1.wsimg.com/ux/favicon/ms-icon-144x144.png" />
+    <meta name="msapplication-config" content="//img1.wsimg.com/ux/favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="manifest" href="//img1.wsimg.com/ux/favicon/manifest.json" />
+    <style>
+        #universalUpgrade {
+            border-radius: 16px;
+            border-style: none;
+            background-color: rgb(252, 229, 243) !important;
+            color: rgb(226, 32, 144) !important;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+        }
+
+        #universalUpgrade:hover {
+            background-color: rgb(249, 204, 231) !important;
+        }
+
+        #universalUpgrade span.icon {
+            vertical-align: initial;
+        }
+
+        #universalUpgradeMobile,
+        .mobile-navigation a[data-aid="upgrade"] {
+            font-weight: bold;
+            color: rgb(226, 32, 144) !important;
+        }
+    </style>
+    <style>
+        svg.iconsvg {
+            width: 16px;
+            height: 16px;
+        }
+    </style>
+    <link rel="stylesheet" media="screen"
+        href="https://d2vnkn0bfhsarv.cloudfront.net/assets/theme/theme_godaddy-25ebc57cf10699d2a6156806fccaea785deb431c8ff17f93142a2f9f8caf493d.css" />
+    <link rel="stylesheet" media="screen"
+        href="https://d2vnkn0bfhsarv.cloudfront.net/assets/application_home-a2d5bd55b8e25d41de882307c981517258bd2e6f4a3109c6aff312474204155e.css" />
+    <link rel="stylesheet" media="screen"
+        href="https://d1lggihq2bt4jo.cloudfront.net/assets/application-9beb30eef678d07fa0603adab9a3b512d5119a5ca4fa65e08b109e78688b0b4c.css" />
+
+    <!--[if lt IE 9
+      ]><script>
+        document.execCommand("BackgroundImageCache", false, true);
+      </script><!
+    [endif]-->
+    <link rel="stylesheet" media="screen"
+        href="https://d1lggihq2bt4jo.cloudfront.net/assets/features-45339a203ad048934447c3220bc191d6bd5c3206e2f3a44334f5c7fe8ca507ee.css" />
+    <link rel="stylesheet" media="screen"
+        href="https://d1lggihq2bt4jo.cloudfront.net/assets/webinars-75dcdc67f09d6d5c0dde21353e7d575527e80a64142cd96ae4ee754cc209fc9e.css" />
+
+    <script
+        src="https://d1lggihq2bt4jo.cloudfront.net/assets/scripts/modernizr.min-da65a6872dcf580912aeba456f271dd299b2f3b779dbbef154538a799690d793.js">
+    </script>
+
+    <script>
+        if (!Modernizr.fontface) {
+            document.write(
+                unescape(
+                    "%3Cscript src='" +
+                    "/cufon/cufon-yui.js' type='text/javascript'%3E%3C/script%3E"
+                )
+            );
+            document.write(
+                unescape(
+                    "%3Cscript src='" +
+                    "/cufon/shag-mystery_400.font.js' type='text/javascript'%3E%3C/script%3E"
+                )
+            );
+        }
+    </script>
+    <script>
+        if (!Modernizr.fontface) {
+            Cufon.replace("h1"); // Works without a selector engine
+            Cufon.replace("h2");
+            Cufon.replace("h3");
+            Cufon.replace("dt");
+        }
+    </script>
+
+    <title>Join a Webinar</title>
+</head>
+
+<body class="home  gem ema">
+    <!--[ if IE 9]><div id="browser_note" style="text-align: center; padding: 2em 1em; font-size: 24px; background: black; z-index: 1000; position: relative; color: white;">You&#39;re using an unsupported browser. Please <a target="_blank" href="http://browsehappy.com">get a new and safer one!</a></div><![endif]-->
+    <div id="header-f9c44afce3691a000d9f4ba2cd7ba659">
+        <div>
+            <div class="">
+                <header class="manifest">
+                    <nav class="nav-top clearfix">
+                        <div class="container-fluid">
+                            <div class="nav-left-wrap">
+                                <a href="https://www.godaddy.com" class="logo brand-logo"
+                                    data-eid="uxp.hyd.app_header.gd_logo.link.click"><span id="homepage"
+                                        class="logo-text logo-gd" aria-label="GoDaddy"><svg class="logo-mark"
+                                            viewBox="0 0 367.7 78.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path class="logo-mark-color"
+                                                d="M95.3 38.6c0-4.6-3.6-8.4-8.3-8.4-4.6 0-8.3 3.8-8.3 8.4s3.6 8.3 8.3 8.3 8.3-3.7 8.3-8.3m14.4.1c0 11.9-10.1 21.4-22.6 21.4-12.6 0-22.6-9.5-22.6-21.4 0-12 10.1-21.6 22.6-21.6 12.5-.1 22.6 9.6 22.6 21.6M154.8 30c0-8-5.6-15-13.9-15h-11.5v30.3h11.5c8.3 0 13.9-7.3 13.9-15.3m15.5 0c0 17.1-12.1 28.8-29.1 28.8h-24.6c-1.2 0-2.1-.9-2.1-2V3.4c0-1.1.9-2 2.1-2h24.6c17.1.1 29.1 11.5 29.1 28.6M194.4 46.9c4.6 0 8.3-3.8 8.3-8.4s-3.6-8.4-8.3-8.4c-4.6 0-8.3 3.8-8.3 8.4 0 4.7 3.7 8.4 8.3 8.4M192.2 17c4.9 0 8.8 1.8 10.5 4.3v-1.2c0-1.1.9-1.9 1.9-1.9H215c1.1 0 1.9.8 1.9 1.9v36.8c0 1.1-.8 1.9-1.9 1.9h-10.3c-1.1 0-1.9-.8-1.9-1.9v-1.2c-1.7 2.5-5.7 4.3-10.6 4.3-10.4 0-20.4-8.3-20.4-21.6s10-21.4 20.4-21.4M241.4 46.9c4.6 0 8.3-3.8 8.3-8.4s-3.6-8.4-8.3-8.4c-4.6 0-8.3 3.8-8.3 8.4 0 4.7 3.7 8.4 8.3 8.4M238.9 17c5 0 8.9 1.9 10.7 4.1V3.4c0-1.1.9-1.9 1.9-1.9H262c1.1 0 1.9.8 1.9 1.9V57c0 1.1-.8 1.9-1.9 1.9h-10.3c-1.1 0-1.9-.8-1.9-1.9v-1.2c-2.1 2.5-5.7 4.3-10.6 4.3-10.4 0-20.4-8.3-20.4-21.6S228.7 17 238.9 17M288.4 46.9c4.6 0 8.3-3.8 8.3-8.4s-3.6-8.4-8.3-8.4c-4.6 0-8.3 3.8-8.3 8.4.1 4.7 3.7 8.4 8.3 8.4M286 17c5 0 8.9 1.9 10.7 4.1V3.4c0-1.1.9-1.9 1.9-1.9H309c1.1 0 1.9.8 1.9 1.9V57c0 1.1-.8 1.9-1.9 1.9h-10.3c-1.1 0-1.9-.8-1.9-1.9v-1.2c-2.1 2.5-5.7 4.3-10.6 4.3-10.4 0-20.4-8.3-20.4-21.6S275.7 17 286 17M345.5 64.7c-2.6 8.6-8.6 13.4-18 13.4-5.1 0-10.1-1.7-13.3-4.5-.5-.5-.8-1.1-.8-1.7 0-.5.2-1.1.7-1.7l3.9-5.9c.6-.8 1.5-.9 1.7-.9.9 0 1.3.2 2.1.8 1.2.8 2.9 1.8 4.8 1.8 1.6 0 3.7-.7 4.5-3.1l1.3-4.1H326c-1.3 0-2.1-.9-2.5-2L313 21.5c-.2-.9-.3-1.4-.3-1.7 0-.8.6-1.5 1.7-1.5h12.4c1.1 0 1.7 1 2 2l6.9 25.4h.5l5.5-25.4c.2-1 .9-2 2-2h12.6c1.2 0 1.7.7 1.7 1.5 0 .3-.1.8-.3 1.7l-12.2 43.2M49.7 50.9c-5 6.9-13.2 9.2-20.5 9.2C12.4 60.1 0 47.6 0 30.2.1 13.5 13.5.2 31 .2c13 0 23.4 5.5 28.1 16 .6 1.2 1 3.2-2.5 3.8l-9.2 1.6c-2.1.4-3.3-1-3.7-1.6-2.7-3.7-7.1-6.2-12.4-6.2-9.2 0-15.7 7-15.7 16.3 0 10.3 7.4 16.3 15.5 16.3 5.4 0 9.8-2 12.7-5.8h-8.1c-1.2 0-2.1-.9-2.1-2v-7.7c0-1.1.9-2 2.1-2h24.7c1.2 0 2.1.9 2.1 2v25.9c0 1.1-.9 2-2.1 2h-8.6c-1.2 0-2.1-.9-2.1-2v-5.9M359.8 0c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 14.4c-3.5 0-6.4-2.9-6.4-6.4s2.9-6.4 6.4-6.4 6.4 2.9 6.4 6.4-2.9 6.4-6.4 6.4z">
+                                            </path>
+                                            <path class="logo-mark-color"
+                                                d="M361.4 6.5c0-.4-.1-.7-.4-.8-.2-.2-.6-.4-.9-.4h-1.4v2.3h1.4c.4 0 .7-.1.9-.4.2-.2.4-.4.4-.7zm-3.1 5.9h-1.5c-.1 0-.1 0-.2-.1 0-.1-.1-.1-.1-.2V3.8c0-.1 0-.1.1-.2.1 0 .1-.1.2-.1h3.3c1.1 0 1.9.2 2.5.8s.9 1.3.9 2.1c0 .6-.1 1.1-.5 1.5-.4.5-.7.8-1.2 1.1l1.9 2.9c.1.1.1.2 0 .4 0 .1-.1.1-.2.1H362c-.1 0-.2 0-.4-.1-.1 0-.1-.1-.2-.2l-1.6-2.7h-1.2V12c0 .1 0 .1-.1.2s-.1.2-.2.2z">
+                                            </path>
+                                        </svg></span></a>
+                                <div class="nav nav-left">
+                                    <div class="waffle-menu" data-eid="uxp.hyd.app_header.waffle_menu.click">
+                                        <div class="popover">
+                                            <button tabindex="0" class="popover-button">
+                                                <span class="uxicon uxicon-apps"></span><span
+                                                    class="product-name">GoCentral</span>
+                                            </button>
+                                            <div class="content">
+                                                <a href="https://account.godaddy.com/products?go_redirect=disabled"
+                                                    class="waffle-home-link" title="Home"
+                                                    data-eid="uxp.hyd.waffle_menu.home.link.click"><span
+                                                        class="uxicon uxicon-home"></span>
+                                                    <span>Home</span></a>
+                                                <div class="tray-menu-divider"></div>
+                                                <div class="quick-links-heading tray-heading">
+                                                    <span>QUICK LINKS</span>
+                                                </div>
+                                                <div class="quick-links">
+                                                    <a href="https://dcc.godaddy.com" class="waffle-link"
+                                                        data-eid="uxp.hyd.waffle_menu.product_domains.link.click">
+                                                        <span>Domains</span></a><a
+                                                        href="https://account.godaddy.com/products?accid=44"
+                                                        class="waffle-link"
+                                                        data-eid="uxp.hyd.waffle_menu.product_websites.link.click">
+                                                        <span>Websites</span></a><a href="https://myh.godaddy.com"
+                                                        class="waffle-link"
+                                                        data-eid="uxp.hyd.waffle_menu.product_hosting_wordpress.link.click">
+                                                        <span>Hosting &amp; WordPress</span></a><a
+                                                        href="https://productivity.godaddy.com/emailchooser"
+                                                        class="waffle-link"
+                                                        data-eid="uxp.hyd.waffle_menu.product_email_office.link.click">
+                                                        <span>Email &amp; Office</span></a><a
+                                                        href="https://certs.godaddy.com" class="waffle-link"
+                                                        data-eid="uxp.hyd.waffle_menu.product_ssl.link.click">
+                                                        <span>SSL Certificates</span></a>
+                                                </div>
+                                                <div class="tray-menu-divider"></div>
+                                                <a href="https://account.godaddy.com/products?go_redirect=disabled"
+                                                    class="waffle-link" title="Manage My Products"
+                                                    data-eid="uxp.hyd.waffle_menu.manage_my_products.link.click">
+                                                    <span>Manage My Products</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <span class="product-name mobile">GoCentral</span>
+                                </div>
+                                <div class="version hidden-sm-down">
+                                    <span class="version"></span>
+                                </div>
+                            </div>
+                            <ul class="nav nav-right">
+                                <li class="nav-item">
+                                    <div>
+                                        <a href="https://www.godaddy.com/help/api/v1/help-bot/gocentral-1000041"
+                                            data-tcc-ignore="true"
+                                            data-eid="uxp.hyd.app_header.shared.help.header_link.link.click"
+                                            class="nav-link uxicon uxicon-help" aria-hidden="true" title="Help"></a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <div>
+                                        <div class="tray-menu customer-menu">
+                                            <div class="tray-toggle-wrapper">
+                                                <button aria-expanded="false" aria-haspopup="true" tabindex="0"
+                                                    class="btn tray-toggle" id="" type="button"
+                                                    aria-label="Customer Info">
+                                                    <span class="app-icon app-icon-user"></span>
+                                                </button>
+                                            </div>
+                                            <div class="tray-align-right tray-dropdown">
+                                                <div class="tray-content">
+                                                    <button class="close"></button>
+                                                    <div class="customer-info-wrap">
+                                                        <div class="customer-icon-wrap">
+                                                            <span class="app-icon app-icon-user"></span>
+                                                        </div>
+                                                        <div class="customer-name">
+                                                            <span>Customer Info</span>
+                                                        </div>
+                                                        <div class="customer-details"></div>
+                                                    </div>
+                                                    <div class="tray-heading"><span>ACCOUNT</span></div>
+                                                    <a class="customer-link"
+                                                        href="https://account.godaddy.com/products?go_redirect=disabled"
+                                                        data-eid="uxp.hyd.app_header.my_products.link.click"><span>My
+                                                            Products</span></a><a class="customer-link"
+                                                        href="https://account.godaddy.com"
+                                                        data-eid="uxp.hyd.app_header.account_settings.link.click"><span>Account
+                                                            Settings</span></a><a class="customer-link"
+                                                        href="https://account.godaddy.com/billing?filter=expires&amp;subFilter=90"
+                                                        data-eid="uxp.hyd.app_header.my_renewals.link.click"><span>My
+                                                            Renewals</span></a>
+                                                    <div class="tray-menu-divider"></div>
+                                                    <div class="tray-heading">
+                                                        <span>RESOURCES</span>
+                                                    </div>
+                                                    <a class="customer-link" href="https://www.godaddy.com"
+                                                        data-eid="uxp.hyd.app_header.shop_gd.link.click"><span>Shop
+                                                            GoDaddy.com</span></a><a class="customer-link"
+                                                        href="https://www.godaddy.com/contact-us"
+                                                        data-eid="uxp.hyd.app_header.phone_number_hours.link.click"><span>Phone
+                                                            Numbers &amp; Hours</span></a><a class="customer-link login"
+                                                        href="https://sso.godaddy.com?realm=idp&amp;path=&amp;app=www"
+                                                        data-eid="uxp.hyd.app_header.login.link.click"><span>Log
+                                                            In</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <nav class="nav-bottom clearfix">
+                        <div class="container-fluid"></div>
+                    </nav>
+                </header>
+            </div>
+        </div>
+    </div>
+                <!-- HEADER ENDS -->
+
+                <!-- Main Section -->
+
+                <section id="webinar-section">
+                    <div id="banner">
+                        <div class="banner-text">
+                            <h2>Join a Webinar!</h2>
+                            <p>We'll show you how to build your website, offer <br> your products and services online,
+                                even
+                                send <br>email marketing campaigns.</p>
+                        </div>
+                    </div>
+
+                    <div id="schedule">
+                        <div class="schedule-container">
+                            <div class="schedule-cards">
+                                <h3>Build your website</h3>
+                                <p>Our experts create a website<br>
+                                   from scratch. Perfect Whether <br>
+                                   You're just getting started or <br>
+                                   looking for tips to make an <br>
+                                   existing site better.</p>
+
+                                <div class="drop-down">
+                                    <select>
+                                        <option>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                        <option>Option 4</option>
+                                        <option>Option 5</option>
+                                    </select>
+                                </div>
+                                   
+                                <button>Sign Up Now</button>
+                            </div>
+                            
+                            <div class="schedule-cards">
+                                <h3>Managing Your Online <br>Business</h3>
+                                <p> Add products and services to <br>
+                                    your website, learn to manage <br>
+                                    payments and shipping, and <br>
+                                    explore tools you need to grow <br>
+                                    your business online. </p>
+
+                                <div class="drop-down">
+                                    <select>
+                                        <option>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                        <option>Option 4</option>
+                                        <option>Option 5</option>
+                                    </select>
+                                </div>
+
+                                <button>Sign Up Now</button>
+                            </div>
+                            
+                            <div class="schedule-cards">
+                                <h3>Email Marketing </h3>
+                                <p>Go from newbie to newsletter <br>
+                                    pro. Learn how to create a <br>
+                                    newsletter, customize it to <br>
+                                    match your website, import <br>
+                                    your contacts, and send. </p>
+
+                                <div class="drop-down">
+                                    <select>
+                                        <option>Option 1</option>
+                                        <option>Option 2</option>
+                                        <option>Option 3</option>
+                                        <option>Option 4</option>
+                                        <option>Option 5</option>
+                                    </select>
+                                </div>
+
+                                <button> Sign Up Now </button>
+                            </div>
+                        
+                        </div>
+                        <p>Webinars are hosted through Zoom (though you don't need zoom to join). After you select a
+                            time you'll receive an email with a <br> meeting link. Webinars cover the main topic for 30
+                            minutes and finish with time for Q&A. Sign up for as many times as you like.</p>
+                    </div>
+
+                    <div id="pre-recorded">
+                        <h2>Dont miss our pre-recorded demos.</h2>
+                        <div id="recorded">
+                            <div class="recorded-card">
+                                <a target="_blank" href="https://www.youtube.com/watch?v=7Nhs8I-0HgQ&feature=youtu.be"> <img class="recorded-img" src="img/youtube.png" alt"play icon"> </a>
+                                <p>Rebuilding a site from a <br> previous website builder</p>
+                                <div class="click">
+                                    <button target="_blank" href="https://www.youtube.com/watch?v=7Nhs8I-0HgQ&feature=youtu.be"  class="btn">Watch Now</button>
+                                    <a target="_blank" class="arrow" href="https://www.youtube.com/watch?v=7Nhs8I-0HgQ&feature=youtu.be"> <img  src="img/right-arrow.png" alt"right arrow"> </a>
+                                </div>
+                            </div>
+
+                            <div class="recorded-card">
+                                <img class="recorded-img" src="img/youtube.png" alt"play icon">
+                                <p>General website builder <br> walk-through</p>
+                                <div class="click">
+                                    <button class="btn">Watch Now</button>
+                                    <img class="arrow" href="#" src="img/right-arrow.png" alt"right arrow">
+                                </div>
+                            </div>
+
+                            <div class="recorded-card">
+                                <img class="recorded-img" src="img/youtube.png" alt"play icon">
+                                <p>Email marketing <br> walk-through</p>
+                                <div class="click">
+                                    <button class="btn">Watch Now</button>
+                                    <img class="arrow" href="#" src="img/right-arrow.png" alt"right arrow">
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <!-- Main Section Ends -->
+
+
+    </div>
+
+    <script>
+        if (!Modernizr.fontface) {
+            Cufon.now();
+        }
+    </script>
+
+    <script>
+        var STATES = {
+            US: [
+                ["Alabama", "AL"],
+                ["Alaska", "AK"],
+                ["Arizona", "AZ"],
+                ["Arkansas", "AR"],
+                ["California", "CA"],
+                ["Colorado", "CO"],
+                ["Connecticut", "CT"],
+                ["Delaware", "DE"],
+                ["District Of Columbia", "DC"],
+                ["Florida", "FL"],
+                ["Georgia", "GA"],
+                ["Hawaii", "HI"],
+                ["Idaho", "ID"],
+                ["Illinois", "IL"],
+                ["Indiana", "IN"],
+                ["Iowa", "IA"],
+                ["Kansas", "KS"],
+                ["Kentucky", "KY"],
+                ["Louisiana", "LA"],
+                ["Maine", "ME"],
+                ["Maryland", "MD"],
+                ["Massachusetts", "MA"],
+                ["Michigan", "MI"],
+                ["Minnesota", "MN"],
+                ["Mississippi", "MS"],
+                ["Missouri", "MO"],
+                ["Montana", "MT"],
+                ["Nebraska", "NE"],
+                ["Nevada", "NV"],
+                ["New Hampshire", "NH"],
+                ["New Jersey", "NJ"],
+                ["New Mexico", "NM"],
+                ["New York", "NY"],
+                ["North Carolina", "NC"],
+                ["North Dakota", "ND"],
+                ["Ohio", "OH"],
+                ["Oklahoma", "OK"],
+                ["Oregon", "OR"],
+                ["Pennsylvania", "PA"],
+                ["Rhode Island", "RI"],
+                ["South Carolina", "SC"],
+                ["South Dakota", "SD"],
+                ["Tennessee", "TN"],
+                ["Texas", "TX"],
+                ["Utah", "UT"],
+                ["Vermont", "VT"],
+                ["Virginia", "VA"],
+                ["Washington", "WA"],
+                ["West Virginia", "WV"],
+                ["Wisconsin", "WI"],
+                ["Wyoming", "WY"],
+                ["Armed Forces (AA)", "AA"],
+                ["Armed Forces (AE)", "AE"],
+                ["Armed Forces (AP)", "AP"],
+                ["American Samoa", "AS"],
+                ["Guam", "GU"],
+                ["Micronesia", "FM"],
+                ["Marshall Islands", "MH"],
+                ["Northern Mariana Islands", "MP"],
+                ["Palau", "PW"],
+                ["Puerto Rico", "PR"],
+                ["US Minor Outlying Islands", "UM"],
+                ["US Virgin Islands", "VI"]
+            ],
+            CA: [
+                ["Alberta", "AB"],
+                ["British Columbia", "BC"],
+                ["Manitoba", "MB"],
+                ["New Brunswick", "NB"],
+                ["Newfoundland and Labrador", "NL"],
+                ["Northwest Territories", "NT"],
+                ["Nova Scotia", "NS"],
+                ["Nunavut", "NU"],
+                ["Ontario", "ON"],
+                ["Prince Edward Island", "PE"],
+                ["Quebec", "QC"],
+                ["Saskatchewan", "SK"],
+                ["Yukon", "YT"]
+            ],
+            AU: [
+                "Australian Capital Territory",
+                "New South Wales",
+                "Northern Territory",
+                "Queensland",
+                "South Australia",
+                "Tasmania",
+                "Victoria",
+                "Western Australia"
+            ],
+            ZA: [
+                "Eastern Cape",
+                "Free State",
+                "Gauteng",
+                "Kwazulu-Natal",
+                "Mpumalanga",
+                "Northern Cape",
+                "Limpopo",
+                "North West Province",
+                "Western Cape"
+            ]
+        };
+
+        var COUNTRY_CHANGES = {
+            default: {
+                "span[data-field=state] label + span > input": {
+                    type: "text"
+                },
+                "span[data-field=state] label + span > button": "hide"
+            },
+            AU: {
+                "span[data-field=state] label": {
+                    label: "Province"
+                },
+                "span[data-field=zipcode] label": {
+                    label: "Zip"
+                },
+                "span[data-field=state] label + span > input": {
+                    type: "hidden"
+                },
+                "span[data-field=state] label + span > button": "show",
+                "span[data-field=state] label + span": {
+                    dropdown: STATES["AU"],
+                    noSelection: "Choose..."
+                }
+            },
+            US: {
+                "span[data-field=state] label": {
+                    label: "State"
+                },
+                "span[data-field=zipcode] label": {
+                    label: "Zip"
+                },
+                "span[data-field=state] label + span > input": {
+                    type: "hidden"
+                },
+                "span[data-field=state] label + span > button": "show",
+                "span[data-field=state] label + span": {
+                    dropdown: STATES["US"],
+                    noSelection: "Choose..."
+                }
+            },
+            CA: {
+                "span[data-field=state] label": {
+                    label: "Province"
+                },
+                "span[data-field=zipcode] label": {
+                    label: "Zip"
+                },
+                "span[data-field=state] label + span > input": {
+                    type: "hidden"
+                },
+                "span[data-field=state] label + span > button": "show",
+                "span[data-field=state] label + span": {
+                    dropdown: STATES["CA"],
+                    noSelection: "Choose..."
+                }
+            },
+            GB: {
+                "span[data-field=state]": "hide",
+                "span[data-field=zipcode] > label": {
+                    label: "Postal code"
+                }
+            },
+            IL: {
+                "span[data-field=state]": "hide",
+                "span[data-field=zipcode] > label": {
+                    label: "Postal code"
+                }
+            },
+            ZA: {
+                "span[data-field=state] label": {
+                    label: "Province"
+                },
+                "span[data-field=zipcode] label": {
+                    label: "Postal code"
+                },
+                "span[data-field=state] label + span > input": {
+                    type: "hidden"
+                },
+                "span[data-field=state] label + span > button": "show",
+                "span[data-field=state] label + span": {
+                    dropdown: STATES["ZA"],
+                    noSelection: "Choose..."
+                }
+            }
+        };
+    </script>
+
+    <script
+        src="https://d1lggihq2bt4jo.cloudfront.net/assets/i18n-base-04ce2aff32112ea663e4d2436f5987c4f3a037a9100c4df5ef635986ad147596.js">
+    </script>
+    <script
+        src="https://d2vnkn0bfhsarv.cloudfront.net/assets/i18n/en-gd-c488d2fdad665dc3ac5d8c1980a4f824f7f59c8d19235a747ae8502b07012c66.js">
+    </script>
+
+    <script>
+        I18n.defaultLocale = "en";
+        I18n.locale = "en-gd";
+    </script>
+
+    <script>
+        window.ux = window.ux || {};
+        window.ux.eldorado = window.ux.eldorado || {};
+
+        (function trfqConfig() {
+            var w = window;
+            var page = w.ux.eldorado.page || {};
+            w._gaDataLayer = w._gaDataLayer || [];
+            w._gaDataLayer = [{
+                loadSource: "uxpHeader"
+            }].concat(w._gaDataLayer, (w.ux && w.ux.gaconfig) || []);
+            w._trfq = w._trfq || [];
+        })();
+    </script>
+    <script src="https://img1.wsimg.com/wrhs/b4083e72a8ebbe36dfdd841896de055a/tcc.min.js" async></script>
+    <script
+        src="https://img1.wsimg.com/poly/v3/polyfill.min.js?features=Promise,Promise.prototype.finally,Intl.~locale.en-US&rum=0&unknown=polyfill&flags=gated">
+    </script>
+    <script src="https://img1.wsimg.com/wrhs/8cb36bd60ad5db1a5950fb0863a1627c/vendor.min.js"></script>
+    <script src="https://img1.wsimg.com/wrhs/1dea9f9bede520f6c1c3d6831146ed95/uxcore2.min.js"></script>
+    <script src="https://img1.wsimg.com/wrhs/bc6a818b9347c5151ea288095136d058/appheader.min.js"></script>
+
+    <script
+        src="https://d2vnkn0bfhsarv.cloudfront.net/assets/application_static-3b79b4888784f3862f97b0815d4454d324ea455daf1c4a21c1c25348f710b085.js">
+    </script>
+
+    <script>
+        var ux = ux || {};
+        ux.eldorado = ux.eldorado || {};
+        ux.eldorado.page = {
+            domain: "gem.godaddy.com",
+            version: "",
+            server: "gem-production",
+            privateLabelId: 1,
+            auth: {
+                jti: '"jriJMCZF7az91CVjvKNVOg"',
+                del: {
+                    jti: "null"
+                }
+            },
+            urlArgs: {
+                ci: ""
+            },
+            features: {
+                inappHelp: false
+            },
+            shopperId: "it8"
+        };
+    </script>
+
+    <script>
+        ux.eldorado.data.set({
+            app: "vnext-dashboard",
+            appName: "GoCentral",
+            currency: "USD",
+            countryName: "United States",
+            env: "prod",
+            excludeBoing: [
+                "el",
+                "en-IN",
+                "hi",
+                "ja",
+                "ko",
+                "mr",
+                "pt-BR",
+                "ta",
+                "th",
+                "ru",
+                "uk",
+                "vi",
+                "zh"
+            ],
+            features: {
+                inappHelp: true,
+                notifsV2: true
+            },
+            languageName: "English",
+            logos: {
+                mobile: "",
+                desktop: ""
+            },
+            manifest: "ApplicationHeader",
+            manifestVersion: "20.2.0",
+            market: "en-US",
+            messages: {
+                "PC:AppHeader:Header:product-domains": "Domains",
+                "PC:AppHeader:Header:product-hosting": "Hosting",
+                "PC:AppHeader:Header:product-email": "Email",
+                "PC:AppHeader:Header:product-ssl": "SSL Certificates",
+                "PC:AppHeader:Header:product-hosting-wordpress": "Hosting & WordPress",
+                "PC:AppHeader:Header:product-email-office": "Email & Office",
+                "PC:AppHeader:Header:product-websites": "Websites",
+                "PC:AppHeader:Header:Home": "Home",
+                "PC:AppHeader:Header:ManageMyProducts": "Manage My Products",
+                "PC:AppHeader:Header:QuickLinks": "QUICK LINKS",
+                "PC:AppHeader:Header:Logout": "Log Out",
+                "PC:AppHeader:Header:Login": "Log In",
+                "PC:AppHeader:Header:ActiveSubMenuDefault": "Menu",
+                "PC:AppHeader:Header:MyAccount": "My Account",
+                "PC:AppHeader:Header:MyAccountHome": "My Account Home",
+                "PC:AppHeader:Header:MyProducts": "My Products",
+                "PC:AppHeader:Header:Account": "ACCOUNT",
+                "PC:AppHeader:Header:AccountSettings": "Account Settings",
+                "PC:AppHeader:Header:AccountLabel": "Hello",
+                "PC:AppHeader:Header:NavigationLabel": "Toggle Navigation",
+                "PC:AppHeader:Header:Support": "Help",
+                "PC:AppHeader:Header:MyRenewals": "My Renewals",
+                "PC:AppHeader:Header:MyPayments": "My Payments",
+                "PC:AppHeader:Header:Resources": "RESOURCES",
+                "PC:AppHeader:Header:ShopGD": "Shop GoDaddy.com",
+                "PC:AppHeader:Header:PhoneNumberHours": "Phone Numbers &amp; Hours",
+                "PC:AppHeader:Header:ViewExpiring": "View items expiring soon",
+                "PC:AppHeader:Header:CustomerNumber": "Customer #",
+                "PC:AppHeader:Header:ManagerID": "Manager ID",
+                "PC:AppHeader:Header:ManagerName": "Manager Name",
+                "PC:AppHeader:Header:VipRepName": "VIP Acct Exec",
+                "PC:AppHeader:Header:VipExecPhone": "Call",
+                "PC:AppHeader:Header:VipExecEmail": "Email",
+                "PC:AppHeader:Header:Cart": "Cart",
+                "PC:AppHeader:Header:ProductMenuLinkDomains": "Domains",
+                "PC:AppHeader:Header:ProductMenuLinkHosting": "Hosting",
+                "PC:AppHeader:Header:ProductMenuLinkEmail": "Email",
+                "PC:AppHeader:Header:AcctDelegationLabel": "{delegate} logged in as: {firstName} {lastName}",
+                "PC:AppHeader:Header:AcctImpersonationExitLabel": "Stop impersonation",
+                "PC:AppHeader:Header:AcctDelegationExitLabel": "Exit access",
+                "PC:AppHeader:Header:ProDashboard": "Pro Dashboard",
+                "PC:AppHeader:Header:usermenu-title": "Customer Info",
+                "PC:AppHeader:Header:RewardPoints": "Reward Points",
+                "PC:AppHeader:Footer:TagLine": "It's Go Time",
+                "PC:AppHeader:Footer:PrivacyPolicy": "Privacy Policy",
+                "PC:AppHeader:Footer:Copyright": "Copyright &copy; 1999 - {year} GoDaddy Operating Company, LLC. All Rights Reserved.",
+                "PC:AppHeader:Footer:CopyrightPL": "Copyright &copy; 1999 - {year} All Rights Reserved.",
+                "Sales:Tealium:PrivacyPolicy:acceptButton": "Accept",
+                "Sales:Tealium:PrivacyPolicy:advertisingText": "Measures our advertising effectiveness to help us make it more relevant to you.",
+                "Sales:Tealium:PrivacyPolicy:analyticsText": "Collects anonymous data about how visitors use our site and how it performs. We use this to improve our products, services and user experience.",
+                "Sales:Tealium:PrivacyPolicy:CategoryName:Advertising": "Advertising",
+                "Sales:Tealium:PrivacyPolicy:CategoryName:Analytics": "Performance",
+                "Sales:Tealium:PrivacyPolicy:CategoryName:Social": "Social Media",
+                "Sales:Tealium:PrivacyPolicy:CategoryName:Support": "Support",
+                "Sales:Tealium:PrivacyPolicy:continueButton": "Continue",
+                "Sales:Tealium:PrivacyPolicy:declineButton": "Decline",
+                "Sales:Tealium:PrivacyPolicy:default": "Default",
+                "Sales:Tealium:PrivacyPolicy:dismissButton": "Dismiss",
+                "Sales:Tealium:PrivacyPolicy:manageSettings": "Manage Settings",
+                "Sales:Tealium:PrivacyPolicy:optOutDialogCategoryLabel": "Category",
+                "Sales:Tealium:PrivacyPolicy:optOutDialogDescriptionLabel": "Description",
+                "Sales:Tealium:PrivacyPolicy:optOutDialogMsg": "Our sites use tools, such as cookies, to understand how you use our services and to improve both your experience and our advertising relevance. Here, you can opt-out of such tracking.",
+                "Sales:Tealium:PrivacyPolicy:optOutDialogMsgTitle": "Your Privacy Options",
+                "Sales:Tealium:PrivacyPolicy:optOutDialogStatusLabel": "Status",
+                "Sales:Tealium:PrivacyPolicy:optOutDialogTitle": "Your Privacy Options",
+                "Sales:Tealium:PrivacyPolicy:optOutTealiumCookiesDesc": "Enables essential services and functionality, including identity verification, service continuity and site security. Opt-Out is not available.",
+                "Sales:Tealium:PrivacyPolicy:optOutTealiumCookiesTitle": "Essential",
+                "Sales:Tealium:PrivacyPolicy:privacyBannerText": "We use tools, such as cookies, to enable essential services and functionality on our site and to collect data on how visitors interact with our site, products and services. By clicking Accept, you agree to our use of these tools for advertising, analytics and support",
+                "Sales:Tealium:PrivacyPolicy:privacyMoreInfoLink": "Learn More",
+                "Sales:Tealium:PrivacyPolicy:privacyTitle": "We serve cookies.",
+                "Sales:Tealium:PrivacyPolicy:saveButton": "Save",
+                "Sales:Tealium:PrivacyPolicy:socialText": "To enhance user experience, and make it easier to share content, some pages contain tools linked to social media services. For details on how they use information that is gathered, please see the service provider’s website.",
+                "Sales:Tealium:PrivacyPolicy:supportText": "Powers interactive services such as chat support and customer feedback tools.",
+                "Shared:Common:OK": "OK",
+                "Shared:Help:HeaderLink": "Help",
+                "Shared:Help:FooterLink": "Help",
+                "Shared:Help:InAppTitle": "Help",
+                "Shared:UtilityBar:LoginForm:Username": "Username",
+                "Shared:UtilityBar:Cart:ItemsInCartMessage": "Checkout Now",
+                "Shared:UtilityBar:AccountTray:MyProducts": "My Products",
+                "Shared:UtilityBar:AccountTray:ResetPin": "Reset",
+                "Shared:UtilityBar:AccountTray:ViewPin": "View",
+                "Shared:AccountTray:CustomerPinLabel": "PIN:",
+                "Shared:UtilityBar:Notifications:HeaderText": "Notifications",
+                "Shared:UtilityBar:Notifications:NoNotificationsTitle": "You have no notifications.",
+                "Shared:UtilityBar:Notifications:NoNotificationsText": "They'll be here when you get 'em.",
+                "Shared:UtilityBar:Notifications:FailedNotificationsTitle": "Your session has expired.",
+                "Shared:UtilityBar:Notifications:FailedNotificationsText": "Please sign in again to receive notifications.",
+                "Shared:UtilityBar:Notifications:FailedNotificationsLink": "Sign In",
+                "Shared:AccountDelegation:validateAuthTitle": "Session Expired",
+                "Shared:AccountDelegation:validateAuthShopper": "You aren't logged in as shopper {displayName}/{shopperId} anymore.",
+                "Shared:AccountDelegation:validateAuthMessage": "You can close this tab or log in again as this shopper.",
+                "Shared:AccountDelegation:pageAuthRefreshMessage": "There seems to be a discrepency with your authentication, please click the button below to attempt to repair it.",
+                "Shared:AccountDelegation:deny-all-title": "Access Restricted",
+                "Shared:AccountDelegation:deny-all-msg": "You can't access this area. Only the account holder can access this area.",
+                "Shared:BrowserDeprecationBanner:HoldingUsBack": "We're not ageist, but your old browser is holding us back.",
+                "Shared:BrowserDeprecationBanner:LatestVersion": "Update to the latest version to see this site in all its glory.",
+                "Shared:BrowserDeprecationBanner:UpdateBrowser": "Update {browser}",
+                "Shared:BrowserDeprecationBanner:GetBrowser": "Get {browser}",
+                "Shared:BrowserDeprecationBanner:DownloadChrome": "https://www.google.com/chrome/",
+                "Shared:BrowserDeprecationBanner:DownloadFirefox": "https://www.mozilla.org/firefox/new/",
+                "Shared:BrowserDeprecationBanner:DownloadSafari": "https://www.apple.com/safari/",
+                "Shared:BrowserDeprecationBanner:DownloadEdge": "https://www.microsoft.com/windows/microsoft-edge",
+                "Shared:MobileNav:MainMenu": "Main Menu",
+                "PC:AppHeader:AppNames:vnext-dashboard": "GoCentral"
+            },
+            privateLabelId: 1,
+            privateLabelName: "GoDaddy",
+            privateLabelType: 1,
+            progId: "GoDaddy",
+            googleAnalyticsId: "",
+            split: "",
+            traffic: "inline",
+            urls: {
+                bigthree: {
+                    domains: {
+                        href: "https://dcc.godaddy.com",
+                        rel: "nofollow"
+                    },
+                    hosting: {
+                        href: "https://myh.godaddy.com"
+                    },
+                    email: {
+                        href: "https://productivity.godaddy.com/emailchooser"
+                    },
+                    ssl: {
+                        href: "https://certs.godaddy.com"
+                    }
+                },
+                account: {
+                    href: "https://account.godaddy.com"
+                },
+                renewals: {
+                    href: "https://account.godaddy.com/billing?filter=expires&subFilter=90"
+                },
+                products: {
+                    href: "https://account.godaddy.com/products?go_redirect=disabled"
+                },
+                accountHome: {
+                    href: "https://account.godaddy.com/overview"
+                },
+                checkout: {
+                    href: "https://cart.godaddy.com"
+                },
+                privacy: {
+                    href: "https://www.godaddy.com/legal/agreements/privacy-policy?target=_blank",
+                    target: "_blank"
+                },
+                cookies: {
+                    href: "https://www.godaddy.com/legal/agreements/cookie-policy"
+                },
+                utos: {
+                    href: "https://www.godaddy.com/legal/agreements/universal-terms-of-service-agreement"
+                },
+                help: {
+                    href: "https://www.godaddy.com/help/api/v1/help-bot/gocentral-1000041"
+                },
+                blog: {
+                    href: "https://www.godaddy.com/blog"
+                },
+                manageDomains: {
+                    href: "https://dcc.godaddy.com",
+                    rel: "nofollow"
+                },
+                manageHosting: {
+                    href: "https://myh.godaddy.com"
+                },
+                manageWebsites: {
+                    href: "https://account.godaddy.com/products?accid=44"
+                },
+                webmailLogin: {
+                    href: "https://email.godaddy.com?target=_blank",
+                    target: "_blank"
+                },
+                home: {
+                    href: "https://www.godaddy.com"
+                },
+                resetPin: {
+                    href: "https://account.godaddy.com/security/login-info/edit"
+                },
+                viewPin: {
+                    href: "https://account.godaddy.com/security/login-info/edit"
+                },
+                pin: {
+                    href: "https://mya.godaddy.com/pin"
+                },
+                gui: {
+                    href: "https://gui.godaddy.com/pcjson/applicationheader"
+                },
+                pro: {
+                    href: "https://pro.godaddy.com"
+                },
+                proHome: {
+                    href: "https://www.godaddy.com/pro"
+                },
+                proHomeApp: {
+                    href: "https://pro.godaddy.com/launch/managewp?landingScreen=pro-home"
+                },
+                notifications: {
+                    api: {
+                        href: "https://mya.godaddy.com/webapi/notifications"
+                    },
+                    cache: {
+                        href: "//img1.wsimg.com/mya/notifications/cache.html"
+                    },
+                    endpoint: {
+                        href: "https://content.godaddy.com/Martech/PersonalizedContentService/NotificationBell/JSON?rp_context=offer_content_service&marketId=en-US"
+                    }
+                },
+                sso: {
+                    exitDelegation: {
+                        href: "https://sso.godaddy.com/cookie/switchback"
+                    },
+                    restoreCookie: {
+                        href: "https://sso.godaddy.com/cookie/restore"
+                    },
+                    createAccount: {
+                        href: "https://sso.godaddy.com/account/create?realm=idp&path=%2F&app=vnext-dashboard"
+                    },
+                    o365Login: {
+                        href: "https://sso.godaddy.com?app=o365&realm=pass",
+                        target: "_blank"
+                    },
+                    login: {
+                        href: "https://sso.godaddy.com?realm=idp&path=%2F&app=vnext-dashboard"
+                    },
+                    logout: {
+                        href: "https://sso.godaddy.com/logout?realm=idp"
+                    }
+                },
+                markets: {
+                    "da-DK": {
+                        href: "https://dk.godaddy.com"
+                    },
+                    "de-AT": {
+                        href: "https://at.godaddy.com"
+                    },
+                    "de-CH": {
+                        href: "https://ch.godaddy.com"
+                    },
+                    "de-DE": {
+                        href: "https://de.godaddy.com"
+                    },
+                    "el-GR": {
+                        href: "https://gr.godaddy.com"
+                    },
+                    "en-AE": {
+                        href: "https://ae.godaddy.com"
+                    },
+                    "en-AU": {
+                        href: "https://au.godaddy.com"
+                    },
+                    "en-CA": {
+                        href: "https://ca.godaddy.com"
+                    },
+                    "en-GB": {
+                        href: "https://uk.godaddy.com"
+                    },
+                    "en-HK": {
+                        href: "https://hk.godaddy.com/en"
+                    },
+                    "en-IE": {
+                        href: "https://ie.godaddy.com"
+                    },
+                    "en-IL": {
+                        href: "https://il.godaddy.com/en"
+                    },
+                    "en-IN": {
+                        href: "https://in.godaddy.com"
+                    },
+                    "en-MY": {
+                        href: "https://my.godaddy.com"
+                    },
+                    "en-NZ": {
+                        href: "https://nz.godaddy.com"
+                    },
+                    "en-PH": {
+                        href: "https://ph.godaddy.com"
+                    },
+                    "en-PK": {
+                        href: "https://pk.godaddy.com"
+                    },
+                    "en-SG": {
+                        href: "https://sg.godaddy.com"
+                    },
+                    "en-US": {
+                        href: "https://www.godaddy.com"
+                    },
+                    "en-ZA": {
+                        href: "https://za.godaddy.com"
+                    },
+                    "es-AR": {
+                        href: "https://ar.godaddy.com"
+                    },
+                    "es-CL": {
+                        href: "https://cl.godaddy.com"
+                    },
+                    "es-CO": {
+                        href: "https://co.godaddy.com"
+                    },
+                    "es-ES": {
+                        href: "https://es.godaddy.com"
+                    },
+                    "es-MX": {
+                        href: "https://mx.godaddy.com"
+                    },
+                    "es-PE": {
+                        href: "https://pe.godaddy.com"
+                    },
+                    "es-US": {
+                        href: "https://www.godaddy.com/es"
+                    },
+                    "es-VE": {
+                        href: "https://ve.godaddy.com"
+                    },
+                    "fi-FI": {
+                        href: "https://fi.godaddy.com"
+                    },
+                    "fr-BE": {
+                        href: "https://be.godaddy.com/fr"
+                    },
+                    "fr-CA": {
+                        href: "https://ca.godaddy.com/fr"
+                    },
+                    "fr-CH": {
+                        href: "https://ch.godaddy.com/fr"
+                    },
+                    "fr-FR": {
+                        href: "https://fr.godaddy.com"
+                    },
+                    "hi-IN": {
+                        href: "https://in.godaddy.com/hi"
+                    },
+                    "id-ID": {
+                        href: "https://id.godaddy.com"
+                    },
+                    "it-CH": {
+                        href: "https://ch.godaddy.com/it"
+                    },
+                    "it-IT": {
+                        href: "https://it.godaddy.com"
+                    },
+                    "ja-JP": {
+                        href: "https://jp.godaddy.com"
+                    },
+                    "ko-KR": {
+                        href: "https://kr.godaddy.com"
+                    },
+                    "mr-IN": {
+                        href: "https://in.godaddy.com/mr"
+                    },
+                    "nb-NO": {
+                        href: "https://no.godaddy.com"
+                    },
+                    "nl-BE": {
+                        href: "https://be.godaddy.com"
+                    },
+                    "nl-NL": {
+                        href: "https://nl.godaddy.com"
+                    },
+                    "pl-PL": {
+                        href: "https://pl.godaddy.com"
+                    },
+                    "pt-BR": {
+                        href: "https://br.godaddy.com"
+                    },
+                    "pt-PT": {
+                        href: "https://pt.godaddy.com"
+                    },
+                    "qa-PS": {
+                        href: "https://www.godaddy.com"
+                    },
+                    "qa-PZ": {
+                        href: "https://www.godaddy.com"
+                    },
+                    "qa-QA": {
+                        href: "https://www.godaddy.com"
+                    },
+                    "ru-RU": {
+                        href: "https://ru.godaddy.com"
+                    },
+                    "sv-SE": {
+                        href: "https://se.godaddy.com"
+                    },
+                    "ta-IN": {
+                        href: "https://in.godaddy.com/ta"
+                    },
+                    "th-TH": {
+                        href: "https://th.godaddy.com"
+                    },
+                    "tr-TR": {
+                        href: "https://tr.godaddy.com"
+                    },
+                    "uk-UA": {
+                        href: "https://ua.godaddy.com"
+                    },
+                    "vi-VN": {
+                        href: "https://vn.godaddy.com"
+                    },
+                    "zh-HK": {
+                        href: "https://hk.godaddy.com"
+                    },
+                    "zh-SG": {
+                        href: "https://sg.godaddy.com/zh"
+                    },
+                    "zh-TW": {
+                        href: "https://tw.godaddy.com"
+                    }
+                },
+                currencyList: {
+                    href: "https://gui.godaddy.com/preference/currency/set"
+                },
+                pcgo: {
+                    href: "https://gui.godaddy.com/pcgo/vnext-dashboard"
+                },
+                contactUs: {
+                    href: "https://www.godaddy.com/contact-us"
+                },
+                helpCenterContactUs: {
+                    href: "https://www.godaddy.com/help/contact-us"
+                },
+                store: {
+                    href: "https://companystore.godaddy.net"
+                },
+                gdAssets: {
+                    href: "https://www.godaddy.com/assets"
+                },
+                cdn: {
+                    href: "//img1.wsimg.com/"
+                },
+                domainSearch: {
+                    href: "https://www.godaddy.com"
+                }
+            },
+            navigationRight: [],
+            navigation: [],
+            resellerUrls: {
+                home: "https://www.godaddy.com",
+                products: "",
+                account: "",
+                help: ""
+            },
+            supportContacts: {
+                technicalSupportLabel: "Contact Us 24/7",
+                technicalSupportPhone: "480-268-8877",
+                technicalSupportHours: "24/7 Support",
+                technicalSupportDescription: "Call our award-winning sales & support team 24/7",
+                liveChatHours: "Hours: All Day Mon – Fri",
+                cityContacts: {}
+            },
+            supportMatrix: {
+                Chrome: ["60.0"],
+                Firefox: ["51.0"],
+                Safari: ["9.0"],
+                "Internet Explorer": [null, "10.0"],
+                Edge: ["15.0"],
+                "Samsung Internet": ["5.4"]
+            },
+            whitelistedUserAgents: [
+                "crm-desktop",
+                "FxiOS",
+                "Googlebot",
+                "Google-Read-Aloud",
+                "AdsBot-Google-Mobile"
+            ],
+            notificationsVersion: 2
+        });
+        if (ux.eldorado.page) {
+            Object.keys(ux.eldorado.page).forEach(function (prop) {
+                var value = ux.eldorado.page[prop];
+                if (typeof value === "object" && !Array.isArray(value)) {
+                    ux.eldorado.data.merge(prop, value);
+                } else {
+                    ux.eldorado.data.set(prop, value);
+                }
+            });
+        }
+        ux.eldorado.data.merge("utagData", {
+            app_name: "vnext-dashboard",
+            pl_id: 1,
+            timestamp: 1565137917416,
+            strings: {
+                acceptButton: "Accept",
+                advertisingText: "Measures our advertising effectiveness to help us make it more relevant to you.",
+                analyticsText: "Collects anonymous data about how visitors use our site and how it performs. We use this to improve our products, services and user experience.",
+                CategoryName_Advertising: "Advertising",
+                CategoryName_Analytics: "Performance",
+                CategoryName_Social: "Social Media",
+                CategoryName_Support: "Support",
+                continueButton: "Continue",
+                declineButton: "Decline",
+                default: "Default",
+                dismissButton: "Dismiss",
+                manageSettings: "Manage Settings",
+                optOutDialogCategoryLabel: "Category",
+                optOutDialogDescriptionLabel: "Description",
+                optOutDialogMsg: "Our sites use tools, such as cookies, to understand how you use our services and to improve both your experience and our advertising relevance. Here, you can opt-out of such tracking.",
+                optOutDialogMsgTitle: "Your Privacy Options",
+                optOutDialogStatusLabel: "Status",
+                optOutDialogTitle: "Your Privacy Options",
+                optOutTealiumCookiesDesc: "Enables essential services and functionality, including identity verification, service continuity and site security. Opt-Out is not available.",
+                optOutTealiumCookiesTitle: "Essential",
+                privacyBannerText: "We use tools, such as cookies, to enable essential services and functionality on our site and to collect data on how visitors interact with our site, products and services. By clicking Accept, you agree to our use of these tools for advertising, analytics and support",
+                privacyMoreInfoLink: "Learn More",
+                privacyTitle: "We serve cookies.",
+                saveButton: "Save",
+                socialText: "To enhance user experience, and make it easier to share content, some pages contain tools linked to social media services. For details on how they use information that is gathered, please see the service provider’s website.",
+                supportText: "Powers interactive services such as chat support and customer feedback tools."
+            },
+            urls: {
+                privacy: "https://www.godaddy.com/legal/agreements/privacy-policy?target=_blank"
+            }
+        });
+        ux.eldorado.data.merge("utagData", window.ux.utagconfig);
+        (function () {
+            if (!window.utag_data) {
+                window.utag_data = {};
+            }
+
+            Object.keys(ux.eldorado.data.utagData).forEach(function (key) {
+                window.utag_data[key] = ux.eldorado.data.utagData[key];
+            });
+        })();
+        setTimeout(function () {
+            window._gaDataLayer = window._gaDataLayer || [];
+            window._gaDataLayer.push({
+                "tcc.tealiumLoaded": true
+            });
+
+            var utagEl = document.createElement("script");
+            utagEl.async = true;
+            utagEl.src =
+                "https://tags.tiqcdn.com/utag/godaddy/godaddy/prod/utag.js";
+            document
+                .getElementsByTagName("script")[0]
+                .parentNode.appendChild(utagEl);
+        }, 0);
+
+        ux.data = {
+            privateLabelId: 1,
+            privateLabelName: "GoDaddy",
+            privateLabelType: 1,
+            progId: "GoDaddy",
+            manifest: "ApplicationHeader",
+            manifestVersion: "20.2.0",
+            market: "en-US",
+            currency: "USD",
+            countryName: "United States",
+            languageName: "English",
+            app: "vnext-dashboard",
+            appName: "GoCentral",
+            env: "prod",
+            split: "",
+            supportContacts: {
+                technicalSupportLabel: "Contact Us 24/7",
+                technicalSupportPhone: "480-268-8877",
+                technicalSupportHours: "24/7 Support",
+                technicalSupportDescription: "Call our award-winning sales & support team 24/7",
+                liveChatHours: "Hours: All Day Mon – Fri",
+                cityContacts: {}
+            }
+        };
+        ux.data.policy = window._policy;
+    </script>
+    <script>
+        try {
+            ux.eldorado.data.set({
+                navigation: [{
+                        caption: "Dashboard",
+                        href: "https://dashboard.godaddy.com/account/5a8123de-3610-11e9-816b-3417ebe73f0e?ua_placement=shared_header",
+                        "data-aid": "dashboard",
+                        eid: "pandc.vnext_gem.header/dashboard.menu_item.click",
+                        "data-mix": "Dashboard#no###gem",
+                        key: "Go:Home"
+                    },
+                    {
+                        caption: "Website",
+                        href: "https://websites.godaddy.com/en-US/editor/0de1f3ce-0a64-4987-bf5b-7033d592207c/13cefe5a-a2dd-47a4-8ef0-ce3c32b96b0b?ua_placement=shared_header",
+                        "data-aid": "website",
+                        eid: "pandc.vnext_gem.header/website.menu_item.click",
+                        "data-mix": "Website#no###gem",
+                        key: "Go:Website"
+                    },
+                    {
+                        caption: "Store",
+                        children: [{
+                                caption: "Overview",
+                                href: "https://0de1f3ce-0a64-4987-bf5b-7033d592207c.onlinestore.godaddy.com/admin/dashboard?ua_placement=shared_header",
+                                "data-aid": "store/sales/overview",
+                                eid: "pandc.vnext_gem.header/store/overview.menu_item.click",
+                                "data-mix": "Overview#no#Store##gem",
+                                key: "Go:Overview"
+                            },
+                            {
+                                caption: "Products",
+                                href: "https://0de1f3ce-0a64-4987-bf5b-7033d592207c.onlinestore.godaddy.com/admin/products?ua_placement=shared_header",
+                                "data-aid": "store/products/all_products",
+                                eid: "pandc.vnext_gem.header/store/products.menu_item.click",
+                                "data-mix": "Products#no#Store##gem",
+                                key: "Go:Products"
+                            },
+                            {
+                                caption: "Categories",
+                                href: "https://0de1f3ce-0a64-4987-bf5b-7033d592207c.onlinestore.godaddy.com/admin/taxons?ua_placement=shared_header",
+                                "data-aid": "store/products/categories",
+                                eid: "pandc.vnext_gem.header/store/categories.menu_item.click",
+                                "data-mix": "Categories#no#Store##gem",
+                                key: "Go:Categories"
+                            },
+                            {
+                                caption: "Orders",
+                                href: "https://0de1f3ce-0a64-4987-bf5b-7033d592207c.onlinestore.godaddy.com/admin/orders?ua_placement=shared_header",
+                                "data-aid": "store/sales/orders",
+                                eid: "pandc.vnext_gem.header/store/orders.menu_item.click",
+                                "data-mix": "Orders#no#Store##gem",
+                                key: "Go:Orders"
+                            },
+                            {
+                                caption: "Marketplaces",
+                                href: "https://0de1f3ce-0a64-4987-bf5b-7033d592207c.onlinestore.godaddy.com/admin/marketplaces?ua_placement=shared_header",
+                                "data-aid": "store/sales/marketplaces",
+                                eid: "pandc.vnext_gem.header/store/marketplaces.menu_item.click",
+                                "data-mix": "Marketplaces#no#Store##gem",
+                                key: "Go:Marketplaces"
+                            }
+                        ],
+                        "data-aid": "store",
+                        eid: "pandc.vnext_gem.header/store.menu_item.click",
+                        "data-mix": "Store#yes#Store##gem",
+                        key: "Go:Store"
+                    },
+                    {
+                        caption: "Marketing",
+                        children: [{
+                                caption: "Coupons",
+                                href: "https://0de1f3ce-0a64-4987-bf5b-7033d592207c.onlinestore.godaddy.com/admin/promotions?ua_placement=shared_header",
+                                "data-aid": "store/sales/coupons",
+                                eid: "pandc.vnext_gem.header/marketing/coupons.menu_item.click",
+                                "data-mix": "Coupons#no#Marketing##gem",
+                                key: "Go:Coupons"
+                            },
+                            {
+                                caption: "SEO",
+                                href: "https://searchenginevisibility.godaddy.com/externalappstart?account_uid=5a8123de-3610-11e9-816b-3417ebe73f0e&marketid=en-US&appLink=VNEXT&ua_placement=shared_header",
+                                "data-aid": "marketing/seo/overview",
+                                eid: "pandc.vnext_gem.header/marketing/seo.menu_item.click",
+                                "data-mix": "SEO#no#Marketing##gem",
+                                key: "Go:Seo"
+                            },
+                            {
+                                caption: "Facebook",
+                                href: "https://dashboard.godaddy.com/facebook?accountId=5a8123de-3610-11e9-816b-3417ebe73f0e&ua_placement=shared_header",
+                                "data-aid": "marketing/social_and_listings/facebook",
+                                eid: "pandc.vnext_gem.header/marketing/facebook.menu_item.click",
+                                "data-mix": "Facebook#no#Marketing##gem",
+                                key: "Go:FacebookPage"
+                            },
+                            {
+                                caption: "Instagram",
+                                href: "https://dashboard.godaddy.com/instagram/?accountId=5a8123de-3610-11e9-816b-3417ebe73f0e&ua_placement=shared_header",
+                                eid: "pandc.vnext_gem.header/marketing/instagram.menu_item.click",
+                                "data-aid": "marketing/instagram",
+                                "data-mix": "Instagram#no#Marketing##gem",
+                                key: "Go:Instagram"
+                            },
+                            {
+                                caption: "Google My Business",
+                                href: "https://dashboard.godaddy.com/account/5a8123de-3610-11e9-816b-3417ebe73f0e/gmb?ua_placement=shared_header",
+                                "data-aid": "marketing/social_and_listings/google_my_business",
+                                eid: "pandc.vnext_gem.header/marketing/google_my_business.menu_item.click",
+                                "data-mix": "Google My Business#no#Marketing##gem",
+                                key: "Go:GoogleMyBusiness"
+                            },
+                            {
+                                caption: "Yelp",
+                                href: "https://dashboard.godaddy.com/account/5a8123de-3610-11e9-816b-3417ebe73f0e/yelp?ua_placement=shared_header",
+                                eid: "pandc.vnext_gem.header/marketing/yelp.menu_item.click",
+                                "data-aid": "marketing/yelp",
+                                "data-mix": "Yelp#no#Marketing##gem",
+                                key: "Go:Yelp"
+                            },
+                            {
+                                caption: "Email",
+                                href: "/promotions?ua_placement=shared_header",
+                                "data-aid": "marketing/email_marketing/campaigns",
+                                eid: "pandc.vnext_gem.header/marketing/email.menu_item.click",
+                                "data-mix": "Email#no#Marketing##gem",
+                                key: "Go:Email"
+                            },
+                            {
+                                caption: "Subscribers",
+                                href: "/audience_members?ua_placement=shared_header",
+                                "data-aid": "marketing/email_marketing/subscribers",
+                                eid: "pandc.vnext_gem.header/marketing/subscribers.menu_item.click",
+                                "data-mix": "Subscribers#no#Marketing##gem",
+                                key: "Go:Subscribers"
+                            },
+                            {
+                                caption: "Blog",
+                                href: "https://blogging.godaddy.com/website/0de1f3ce-0a64-4987-bf5b-7033d592207c?ua_placement=shared_header",
+                                "data-aid": "blog",
+                                eid: "pandc.vnext_gem.header/marketing/blog.menu_item.click",
+                                "data-mix": "Blog#no#Marketing##gem",
+                                key: "Go:Blog"
+                            },
+                            {
+                                caption: "Ad Credits",
+                                href: "https://dashboard.godaddy.com/account/5a8123de-3610-11e9-816b-3417ebe73f0e/adcredits?ua_placement=shared_header",
+                                eid: "pandc.vnext_gem.header/marketing/ad_credits.menu_item.click",
+                                "data-aid": "marketing/ad_credits",
+                                "data-mix": "Ad Credits#no#Marketing##gem",
+                                key: "Go:AdCredits"
+                            }
+                        ],
+                        "data-aid": "marketing",
+                        eid: "pandc.vnext_gem.header/marketing.menu_item.click",
+                        "data-mix": "Marketing#yes#Marketing##gem",
+                        key: "Go:Marketing"
+                    },
+                    {
+                        caption: "Connections",
+                        children: [{
+                                caption: "All",
+                                href: "https://contacts.godaddy.com/contacts?website_id=0de1f3ce-0a64-4987-bf5b-7033d592207c&role=all&ua_placement=shared_header",
+                                "data-aid": "connections/all",
+                                eid: "pandc.vnext_gem.header/connections/all.menu_item.click",
+                                "data-mix": "All#no#Connections##gem",
+                                key: "Go:All"
+                            },
+                            {
+                                caption: "Customers",
+                                href: "https://contacts.godaddy.com/contacts?website_id=0de1f3ce-0a64-4987-bf5b-7033d592207c&role=customer&ua_placement=shared_header",
+                                "data-aid": "connections/customers",
+                                eid: "pandc.vnext_gem.header/connections/customers.menu_item.click",
+                                "data-mix": "Customers#no#Connections##gem",
+                                key: "Go:Customers"
+                            },
+                            {
+                                caption: "Members",
+                                href: "https://contacts.godaddy.com/contacts?website_id=0de1f3ce-0a64-4987-bf5b-7033d592207c&role=member&ua_placement=shared_header",
+                                "data-aid": "connections/members",
+                                eid: "pandc.vnext_gem.header/connections/members.menu_item.click",
+                                "data-mix": "Members#no#Connections##gem",
+                                key: "Go:Members"
+                            }
+                        ],
+                        "data-aid": "connections",
+                        eid: "pandc.vnext_gem.header/connections.menu_item.click",
+                        "data-mix": "Connections#yes#Connections##gem",
+                        key: "Go:Connections"
+                    },
+                    {
+                        caption: "Settings",
+                        children: [{
+                                caption: "Store",
+                                children: [{
+                                        caption: "General",
+                                        href: "https://0de1f3ce-0a64-4987-bf5b-7033d592207c.onlinestore.godaddy.com/admin/general_settings/edit?ua_placement=shared_header",
+                                        "data-aid": "store/settings/general",
+                                        eid: "pandc.vnext_gem.header/settings/store/general.menu_item.click",
+                                        "data-mix": "General#no#Settings#Store#gem",
+                                        key: "Go:General"
+                                    },
+                                    {
+                                        caption: "Shipping",
+                                        href: "https://0de1f3ce-0a64-4987-bf5b-7033d592207c.onlinestore.godaddy.com/admin/shipping_methods?ua_placement=shared_header",
+                                        "data-aid": "store/settings/shipping",
+                                        eid: "pandc.vnext_gem.header/settings/store/shipping.menu_item.click",
+                                        "data-mix": "Shipping#no#Settings#Store#gem",
+                                        key: "Go:Shipping"
+                                    },
+                                    {
+                                        caption: "Payments",
+                                        href: "https://0de1f3ce-0a64-4987-bf5b-7033d592207c.onlinestore.godaddy.com/admin/payment_methods?ua_placement=shared_header",
+                                        "data-aid": "store/settings/payments",
+                                        eid: "pandc.vnext_gem.header/settings/store/payments.menu_item.click",
+                                        "data-mix": "Payments#no#Settings#Store#gem",
+                                        key: "Go:Payments"
+                                    },
+                                    {
+                                        caption: "Tax",
+                                        href: "https://0de1f3ce-0a64-4987-bf5b-7033d592207c.onlinestore.godaddy.com/admin/tax_rates?ua_placement=shared_header",
+                                        "data-aid": "store/settings/tax",
+                                        eid: "pandc.vnext_gem.header/settings/store/tax.menu_item.click",
+                                        "data-mix": "Tax#no#Settings#Store#gem",
+                                        key: "Go:Tax"
+                                    }
+                                ],
+                                "data-aid": "settings/store",
+                                eid: "pandc.vnext_gem.header/settings/store.menu_item.click",
+                                "data-mix": "Store#yes#Settings##gem",
+                                key: "Go:Store"
+                            },
+                            {
+                                caption: "Marketing",
+                                children: [{
+                                    caption: "Email",
+                                    href: "/user/edit?ua_placement=shared_header",
+                                    "data-aid": "marketing/email_marketing/settings",
+                                    eid: "pandc.vnext_gem.header/settings/marketing/email.menu_item.click",
+                                    "data-mix": "Email#no#Settings#Marketing#gem",
+                                    key: "Go:Email"
+                                }],
+                                "data-aid": "settings/marketing",
+                                eid: "pandc.vnext_gem.header/settings/marketing.menu_item.click",
+                                "data-mix": "Marketing#yes#Settings##gem",
+                                key: "Go:Marketing"
+                            },
+                            {
+                                caption: "Connections",
+                                children: [{
+                                    caption: "Membership",
+                                    href: "https://contacts.godaddy.com/settings?website_id=0de1f3ce-0a64-4987-bf5b-7033d592207c&ua_placement=shared_header",
+                                    "data-aid": "connections/settings",
+                                    eid: "pandc.vnext_gem.header/settings/connections/membership.menu_item.click",
+                                    "data-mix": "Membership#no#Settings#Connections#gem",
+                                    key: "Go:Membership"
+                                }],
+                                "data-aid": "settings/connections",
+                                eid: "pandc.vnext_gem.header/settings/connections.menu_item.click",
+                                "data-mix": "Connections#yes#Settings##gem",
+                                key: "Go:Connections"
+                            }
+                        ],
+                        "data-aid": "settings",
+                        eid: "pandc.vnext_gem.header/settings.menu_item.click",
+                        "data-mix": "Settings#yes#Settings##gem",
+                        key: "Go:Settings"
+                    }
+                ],
+                navigationRight: []
+            });
+        } catch (e) {}
+    </script>
+
+    <script>
+        ReactDOM.render(
+            React.createElement(ApplicationHeader.Header, ux.eldorado.data.props),
+            document.getElementById("header-f9c44afce3691a000d9f4ba2cd7ba659")
+        );
+        ReactDOM.render(
+            React.createElement(ApplicationHeader.Footer, ux.eldorado.data.props),
+            document.getElementById("footer-f9c44afce3691a000d9f4ba2cd7ba659")
+        );
+    </script>
+    <script>
+        try {
+            ux.eldorado.header(function (err, instance) {
+                if (err || !instance) return;
+                instance.setState({
+                    navigation: instance.props.navigation.map(function (nav) {
+                        nav.active = ["marketing"].indexOf(nav["data-aid"]) >= 0;
+                        return nav;
+                    })
+                });
+            });
+        } catch (e) {}
+    </script>
+    <script>
+        ReactDOM.render(
+            React.createElement(ApplicationHeader.Header, ux.eldorado.data.props),
+            document.getElementById("header-f9c44afce3691a000d9f4ba2cd7ba659")
+        );
+        ReactDOM.render(
+            React.createElement(ApplicationHeader.Footer, ux.eldorado.data.props),
+            document.getElementById("footer-f9c44afce3691a000d9f4ba2cd7ba659")
+        );
+    </script>
+    <script>
+        try {
+            ux.eldorado.header(function (err, instance) {
+                if (err || !instance) return;
+                instance.setState({
+                    navigation: instance.props.navigation.map(function (nav) {
+                        nav.active = ["marketing"].indexOf(nav["data-aid"]) >= 0;
+                        return nav;
+                    })
+                });
+            });
+        } catch (e) {}
+    </script>
+
+    <div class="side_switch">
+        <section>
+            <ul>
+                <li class="twitter">
+                    <a href="https://twitter.com/madmimi" class="twitter-follow-button" data-show-count="false"
+                        data-show-screen-name="false">Follow @madmimi</a>
+                    <script data-cfasync="true">
+                        !(function (d, s, id) {
+                            var js,
+                                fjs = d.getElementsByTagName(s)[0];
+                            if (!d.getElementById(id)) {
+                                js = d.createElement(s);
+                                js.id = id;
+                                js.src = "//platform.twitter.com/widgets.js";
+                                fjs.parentNode.insertBefore(js, fjs);
+                            }
+                        })(document, "script", "twitter-wjs");
+                    </script>
+                </li>
+                <li class="plusone">
+                    <div class="g-plusone" data-size="medium" data-annotation="none" data-href="http://madmimi.com">
+                    </div>
+                    <script type="text/javascript" data-cfasync="true">
+                        (function () {
+                            var po = document.createElement("script");
+                            po.type = "text/javascript";
+                            po.async = true;
+                            po.src = "https://apis.google.com/js/plusone.js";
+                            var s = document.getElementsByTagName("script")[0];
+                            s.parentNode.insertBefore(po, s);
+                        })();
+                    </script>
+                </li>
+                <li class="facebook">
+                    <iframe
+                        src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffacebook.com%2Fmadmimi&amp;width=80&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21&amp;appId=152926008054123&amp;locale=en_US"
+                        scrolling="no" frameborder="0"
+                        style="border:none; overflow:hidden; max-width:90px; height:21px;"
+                        allowTransparency="true"></iframe>
+                </li>
+            </ul>
+            <span>Share</span>
+        </section>
+    </div>
+
+    <script>
+        jQuery(document).ready(function () {
+            var sideSwitchSection = jQuery(".side_switch section");
+            sideSwitchSection.mouseenter(function () {
+                jQuery(this).addClass("hover");
+            });
+            sideSwitchSection.mouseleave(function () {
+                jQuery(this).removeClass("hover");
+            });
+        });
+    </script>
+
+    <script>
+        Mimi.User = {
+            id: 1980015,
+            first_name: "there",
+            name: null,
+            email: null,
+            organization_name: null,
+            organization_url: null,
+            postal_address: null,
+            pusher_token: null,
+            shopper_id: "it8",
+            plan: "Basic 500",
+            multiple_accounts: false,
+            approved: false,
+            crm_enabled: false
+        };
+        Widget.MimiFlash.MESSAGES = {};
+        (function () {
+            var button = document.getElementById("language_button");
+            menu = document.getElementById("language-select");
+            button.onclick = function (event) {
+                event.preventDefault();
+                if (menu.style.display == "block") {
+                    menu.style.display = "none";
+                } else {
+                    menu.style.display = "block";
+                }
+            };
+            button.onblur = function (event) {
+                setTimeout(function () {
+                    menu.style.display = "none";
+                }, 200);
+            };
+        })();
+
+        (function ($) {})(jQuery);
+
+        (function () {
+            var getElementsByClassName = function (node, classname) {
+                var a = [],
+                    re = new RegExp("(^| )" + classname + "( |$)"),
+                    els = node.getElementsByTagName("*");
+                for (var i = 0, j = els.length; i < j; i++) {
+                    if (re.test(els[i].className)) {
+                        a.push(els[i]);
+                    }
+                }
+                return a;
+            };
+            var qnas = getElementsByClassName(document, "qna");
+            for (var i = 0, l = qnas.length; i < l; ++i) {
+                qnas[i].onclick = function (event) {
+                    var el = event.target;
+                    if (
+                        el.className.indexOf("mbtn") > -1 ||
+                        el.nodeName.toLowerCase() == "a"
+                    ) {
+                        return; // Don't interfere with buttons or anchor tags
+                    }
+                    while (el && el.nodeName.toLowerCase() != "li") {
+                        el = el.parentNode;
+                    }
+                    if (el) {
+                        if (el.className.indexOf("current") > 0) {
+                            el.className = el.className.replace("current", "");
+                        } else {
+                            el.className = el.className + " current";
+                        }
+                    }
+                    event.stopImmediatePropagation && event.stopImmediatePropagation();
+                    return false;
+                };
+            }
+        })();
+    </script>
+
+    <script>
+        window.tccListenerDisabled = true;
+        var _gaDataLayer = _gaDataLayer || [];
+        _gaDataLayer.push({
+            isc: ""
+        });
+        _gaDataLayer.push({
+            "tcc.status": "on"
+        });
+        _gaDataLayer.push({
+            status: "200"
+        });
+        _gaDataLayer.push({
+            account_uid: "5a8123de-3610-11e9-816b-3417ebe73f0e"
+        });
+        var _gaq = _gaq || [];
+        _gaq.push(["_setDomainName", "gem.godaddy.com"]);
+
+        var _trfq = _trfq || []; // only if needed
+        (function ($) {
+            $("body").on("click traffic:click traffic:hover drop", function (e) {
+                var eid =
+                    $(e.target)
+                    .closest("[data-click-eid]")
+                    .data("click-eid") ||
+                    $(e.target)
+                    .closest("[data-eid]")
+                    .data("eid");
+
+                if (eid) {
+                    var eventType = e.type.replace("traffic:", "");
+                    _trfq.push(["cmdLogPageEvent", eventType, eid]);
+                }
+            });
+
+            $(document).on("traffic:click", function (e, memo) {
+                if (memo != undefined) {
+                    var eid = memo.eid;
+                    if (eid) {
+                        _trfq.push(["cmdLogPageEvent", "", eid]);
+                    }
+                }
+            });
+
+            $("nav.nav-bottom").on("click", function (e, memo) {
+                var clickedElement = e.target;
+                if (clickedElement && clickedElement.dataset.mix) {
+                    var mixEvent = clickedElement.dataset.mix.split("#");
+                    var property = {
+                        "Item Name": mixEvent[0],
+                        "Is Group": mixEvent[1] === "yes",
+                        "Group Name": mixEvent[2],
+                        "Column Name": mixEvent[3],
+                        Application: mixEvent[4]
+                    };
+                    window._eventTracker.track("navigationClick", property);
+                }
+            });
+
+            $(document).ready(function () {
+                if (!window.appconfigEids) return;
+                _.each(window.appconfigEids, function (eid) {
+                    _trfq.push(["cmdLogPageEvent", "", eid]);
+                });
+            });
+        })(jQuery);
+        window._eventTracker =
+            window._eventTracker ||
+            UserAnalytics({
+                shopperId: "it8",
+                mixpanel: {
+                    token: "2d9c4ff0a734e4739c7d4eb7f7d32597",
+                    rerouteToken: "2c8dd66067e722c5be3ba3e0c3329073",
+                    identifier: "0de1f3ce-0a64-4987-bf5b-7033d592207c"
+                },
+                eventMap: {
+                    navigationClick: {
+                        mixpanel: ["Navigation", {}]
+                    },
+                    facebookShare: {
+                        mixpanel: ["Facebook Share", {}]
+                    },
+                    composeCampaign: {
+                        mixpanel: ["Compose Campaign", {}]
+                    },
+                    composeDialog: {
+                        mixpanel: ["Compose Dialog Opened", {}]
+                    },
+                    sendCampaign: {
+                        mixpanel: ["Send Campaign", {}]
+                    }
+                },
+                debug: false
+            }).instance;
+        window.mixpanel.unregister("Shopper ID");
+        window.mixpanel.unregister("shopperId");
+
+        if (performance && typeof performance.mark == "function") {
+            performance.mark("visual_complete");
+        }
+    </script>
+</body>
+
+</html>
